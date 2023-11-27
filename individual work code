@@ -1,0 +1,33 @@
+import random
+def printList(lst):
+    for i in range(len(lst)):
+        for j in range(len(lst[i])):
+            print(lst[i][j], end='    ')
+        print()
+n = 4
+m = 5
+a = []
+b = []
+for i in range(n):
+    a.append([])
+    for j in range(m):
+        a[i].append(random.randint(1,9))
+printList(a)
+print('')
+for i in range(n):
+    p = 1
+    for j in range(m):
+        if i%2==0:
+            p = p * a[i][j]
+    if p != 1:
+        b.append(p)
+        print(i+1, "-ci setrdeki elementlerin hasili:", p)
+print(f'Tək sətirdəki elementlərin hasilinin maksimumu : ',max(b))
+
+
+
+
+
+
+
+
